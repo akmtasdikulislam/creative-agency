@@ -1,11 +1,6 @@
 # Creative Agency
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://res.cloudinary.com/disqpzshx/image/upload/v1740489256/creative-agency/logo-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://res.cloudinary.com/disqpzshx/image/upload/v1740489255/creative-agency/logo-light.png">
-    <img alt="Creative Agency Banner" src="https://res.cloudinary.com/disqpzshx/image/upload/v1740489256/creative-agency/logo-dark.png">
-  </picture>
+  <img src="https://res.cloudinary.com/disqpzshx/image/upload/v1740489256/creative-agency/logo-dark.png" alt="Creative Agency Banner">
 </p>
 
 A full-stack MERN application for a creative agency offering web design and development services. This project demonstrates role-based functionality for customers and administrators, including service browsing, order placement, review management, and robust admin controls.
@@ -200,6 +195,6 @@ This project is licensed under the MIT License.
 
 If you have any questions or need further information, please feel free to reach out:
 
-- **Email:** your.email@example.com
-- **LinkedIn:** [Your LinkedIn](#)
-- **Upwork:** [Your Upwork Profile](#)
+- **Email:** akmtasdikulislam@gmail.com
+- **LinkedIn:** [Akm Tasdikul Islam](https://www.linkedin.com/in/akm-tasdikul-islam/)
+- **Upwork:** [Akm Tasdikul Islam](https://www.upwork.com/freelancers/~01fe1fc80c8877ffe2)
