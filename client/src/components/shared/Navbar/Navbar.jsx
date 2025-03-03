@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
+import { NavLink } from "react-router";
 import logo from "../../../assets/images/logos/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,42 +10,57 @@ const Navbar = () => {
   };
 
   return (
-    <div className="navbar max-w-screen xl:px-30 relative flex w-screen max-lg:items-center max-lg:justify-center lg:justify-between lg:px-20 xl:py-10">
+    <div className="navbar max-w-screen xl:px-30 relative flex w-screen max-md:items-center max-md:justify-center md:justify-between md:px-10 lg:px-20 lg:py-10">
       <div className="">
         <a className="btn btn-ghost border-none text-xl hover:border-none hover:bg-transparent hover:shadow-none">
           <img src={logo} alt="Creative Agency" className="w-32" />
         </a>
       </div>
       <div
-        className={`max-lg:bg-base-100 max-lg:p-15 transition-all duration-500 max-lg:absolute max-lg:top-0 max-lg:z-10 max-lg:flex max-lg:h-screen max-lg:w-fit max-lg:flex-col max-lg:justify-between max-lg:shadow-xl lg:flex-none ${isOpen ? "right-0" : "-right-full"}`}
+        className={`max-md:bg-base-100 max-md:p-15 transition-all duration-500 max-md:absolute max-md:top-0 max-md:z-10 max-md:flex max-md:h-screen max-md:w-fit max-md:flex-col max-md:justify-between max-md:shadow-xl lg:flex-none ${isOpen ? "right-0" : "-right-full"}`}
       >
-        <ul className="menu max-lg:menu-vertical menu-horizontal px-1">
+        <ul className="menu max-md:menu-vertical menu-horizontal px-1">
           <li>
-            <a className="nav-link max-lg:text-lg lg:text-base">Home</a>
+            <NavLink to="/" className="nav-link max-md:text-lg lg:text-base">
+              Home
+            </NavLink>
           </li>
           <li>
-            <a className="nav-link max-lg:text-lg lg:text-base">
+            <NavLink
+              to="/our-portfolio"
+              className="nav-link max-md:text-lg md:text-base"
+            >
               Our Portfolio
-            </a>
+            </NavLink>
           </li>
           <li>
-            <a className="nav-link max-lg:text-lg lg:text-base">Our Team</a>
+            <NavLink
+              to="/our-team"
+              className="nav-link max-md:text-lg md:text-base"
+            >
+              Our Team
+            </NavLink>
           </li>
           <li>
-            <a className="nav-link max-lg:text-lg lg:text-base">Contact Us</a>
+            <NavLink
+              to="/contact-us"
+              className="nav-link max-md:text-lg md:text-base"
+            >
+              Contact Us
+            </NavLink>
           </li>
         </ul>
         <a className="btn btn-neutral">Login</a>
         <button
           onClick={handleNavMenu}
-          className="btn absolute right-1 top-3 border-none bg-transparent shadow-none focus:text-amber-400 active:text-amber-400 lg:hidden"
+          className="btn absolute right-1 top-3 border-none bg-transparent shadow-none focus:text-amber-400 active:text-amber-400 md:hidden"
         >
           <HiXMark size={"2em"} />
         </button>
       </div>
       <button
         onClick={handleNavMenu}
-        className="btn left-10/12 sm:left-11/12 absolute top-1 border-none bg-transparent shadow-none active:text-amber-400 lg:hidden"
+        className="btn left-10/12 sm:left-11/12 absolute top-1 border-none bg-transparent shadow-none active:text-amber-400 md:hidden"
       >
         <HiBars3 size={"2em"} />
       </button>
