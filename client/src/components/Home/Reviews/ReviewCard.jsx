@@ -9,7 +9,7 @@ const ReviewCard = ({ review }) => {
   };
 
   return (
-    <div className="card bg-base-100 w-full flex-auto shadow-sm transition-all duration-500 hover:cursor-pointer hover:shadow-2xl focus:shadow-2xl active:shadow-2xl sm:w-96 md:flex-none">
+    <div className="card bg-base-100 sm:max-w-100 w-full flex-auto shadow-sm transition-all duration-500 hover:cursor-pointer hover:shadow-2xl focus:shadow-2xl active:shadow-2xl sm:w-80 md:flex-none lg:w-auto">
       <div className="card-title flex items-center gap-4">
         <figure className="pl-7 pt-10">
           <img
