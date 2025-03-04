@@ -61,7 +61,7 @@ const Reviews = () => {
         Clients <span className="text-secondary">Feedback</span>
       </h2>
 
-      <div className="xl:px-30 mt-10 flex flex-wrap items-center justify-center gap-10 px-5 md:px-20">
+      <div className="xl:px-30 mt-10 flex flex-wrap items-center justify-center gap-5 px-5 md:px-10">
         {reviewsData.map((review) => (
           <ReviewCard key={review.id} review={review} />
         ))}
