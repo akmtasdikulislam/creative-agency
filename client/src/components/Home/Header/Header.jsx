@@ -4,7 +4,7 @@ import HeroSection from "../HeroSection/HeroSection";
 
 const Header = () => {
   return (
-    <div className="relative flex h-screen flex-col items-start">
+    <div className="relative flex max-h-max min-h-screen flex-col items-start overflow-x-hidden">
       <div className="clip-diagonal bg-primary absolute -z-10 h-full w-full"></div>
       <Navbar />
       <HeroSection />
