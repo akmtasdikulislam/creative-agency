@@ -17,7 +17,7 @@ const Navbar = () => {
         </a>
       </div>
       <div
-        className={`max-md:bg-base-100 max-md:p-15 transition-all duration-500 max-md:absolute max-md:top-0 max-md:z-10 max-md:flex max-md:h-screen max-md:w-fit max-md:flex-col max-md:justify-between max-md:shadow-xl lg:flex-none ${isOpen ? "right-0" : "-right-full"}`}
+        className={`max-md:bg-base-100 max-md:p-15 max-md:shadow-3xl transition-all duration-500 max-md:absolute max-md:top-0 max-md:z-10 max-md:flex max-md:h-screen max-md:w-fit max-md:flex-col max-md:justify-between lg:flex-none ${isOpen ? "right-0" : "-right-full"}`}
       >
         <ul className="menu max-md:menu-vertical menu-horizontal px-1">
           <li>
