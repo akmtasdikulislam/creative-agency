@@ -61,7 +61,7 @@ const Services = () => {
           View all <HiArrowRight size={""} />
         </Link>
       </div>
-      <div className="xl:px-30 mt-10 flex flex-wrap items-center justify-center gap-10 px-10 md:px-20">
+      <div className="xl:px-30 mt-10 flex flex-wrap items-center justify-center gap-10 px-5 md:px-20">
         {servicesData.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
