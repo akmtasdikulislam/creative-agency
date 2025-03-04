@@ -3,15 +3,15 @@ import HeroIllustration from "../../../assets/images/hero-illustration.png";
 
 const HeroSection = () => {
   return (
-    <section className="xl:px-30 flex h-full w-full flex-col-reverse items-center justify-center gap-0 px-10 md:h-2/3 md:flex-row md:justify-between md:gap-5 md:px-10 lg:gap-10 lg:px-20">
+    <section className="xl:px-30 flex h-full w-full flex-col-reverse items-center justify-center gap-5 px-5 md:h-2/3 md:flex-row md:justify-between md:gap-5 md:px-10 lg:gap-10 lg:px-20">
       <div className="md:min-w-1/3 xl:max-w-1/2 2xl:max-w-1/3 w-full flex-auto">
-        <h1 className="text-4xl font-bold text-black md:text-5xl xl:text-7xl">
+        <h1 className="text-4xl font-bold md:text-5xl xl:text-7xl">
           Let's Grow Your Brand To The Next Level
         </h1>
-        <p className="my-5 sm:my-10">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-          expedita odio tenetur assumenda earum doloribus eligendi repudiandae?
-          Provident, nisi temporibus.
+        <p className="text-default my-5 sm:my-10">
+          Discover our expert team dedicated to elevating your brand through
+          innovative digital solutions. We specialize in creating impactful
+          strategies and stunning designs that drive real results.
         </p>
         <button className="btn btn-neutral">Hire us</button>
       </div>
