@@ -14,7 +14,7 @@ const TrustedPartners = () => {
     { id: 5, name: "Airbnb", image: airbnbLogo },
   ];
   return (
-    <section className="lg:max-w-3/4 my-5 flex flex-wrap items-center justify-center gap-5 px-10 md:my-10 lg:mx-auto lg:gap-10 2xl:gap-20">
+    <section className="lg:max-w-3/4 my-5 flex flex-wrap items-center justify-center gap-5 px-5 md:my-10 md:px-10 lg:mx-auto lg:gap-10 2xl:gap-20">
       {partners.map((partner) => (
         <img
           src={partner.image}
