@@ -1,4 +1,5 @@
 import React from "react";
+import ContactUs from "../../components/Home/ContactUs/ContactUs";
 import Header from "../../components/Home/Header/Header";
 import Reviews from "../../components/Home/Reviews/Reviews";
 import Services from "../../components/Home/Services/Services";
@@ -11,6 +12,7 @@ const Home = () => {
       <TrustedPartners />
       <Services />
       <Reviews />
+      <ContactUs />
     </main>
   );
 };
