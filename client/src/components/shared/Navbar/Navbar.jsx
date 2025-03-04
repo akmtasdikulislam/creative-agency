@@ -53,14 +53,14 @@ const Navbar = () => {
         <a className="btn btn-neutral">Login</a>
         <button
           onClick={handleNavMenu}
-          className="btn absolute right-1 top-3 border-none bg-transparent shadow-none focus:text-amber-400 active:text-amber-400 md:hidden"
+          className="btn focus:text-secondary active:text-secondary hover:text-secondary absolute right-1 top-3 border-none bg-transparent shadow-none md:hidden"
         >
           <HiXMark size={"2em"} />
         </button>
       </div>
       <button
         onClick={handleNavMenu}
-        className="btn left-10/12 sm:left-11/12 absolute top-1 border-none bg-transparent shadow-none active:text-amber-400 md:hidden"
+        className="btn left-10/12 sm:left-11/12 focus:text-secondary active:text-secondary hover:text-secondary absolute top-1 border-none bg-transparent shadow-none md:hidden"
       >
         <HiBars3 size={"2em"} />
       </button>
