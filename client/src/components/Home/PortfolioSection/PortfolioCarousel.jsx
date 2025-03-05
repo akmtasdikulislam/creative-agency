@@ -9,9 +9,9 @@ import carousel2 from "../../../assets/images/carousels/carousel-2.png";
 import carousel3 from "../../../assets/images/carousels/carousel-3.png";
 import carousel4 from "../../../assets/images/carousels/carousel-4.png";
 import carousel5 from "../../../assets/images/carousels/carousel-5.png";
-import "./WorkSlider.css";
+import "./PortfolioCarousel.css";
 
-const WorkSlider = () => {
+const PortfolioCarousel = () => {
   const works = [
     { id: 1, image: carousel1 },
     { id: 2, image: carousel2 },
@@ -61,4 +61,4 @@ const WorkSlider = () => {
   );
 };
 
-export default WorkSlider;
+export default PortfolioCarousel;
