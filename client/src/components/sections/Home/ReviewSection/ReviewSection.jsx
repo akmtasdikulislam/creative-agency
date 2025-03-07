@@ -1,12 +1,11 @@
-import React from "react";
-import customer1 from "../../../assets/images/customers/customer-1.png";
-import customer2 from "../../../assets/images/customers/customer-2.png";
-import customer3 from "../../../assets/images/customers/customer-3.png";
-import customer4 from "../../../assets/images/customers/customer-4.png";
-import customer5 from "../../../assets/images/customers/customer-5.png";
-import ReviewCard from "./ReviewCard";
+import customer1 from "@assets/images/customers/customer-1.png";
+import customer2 from "@assets/images/customers/customer-2.png";
+import customer3 from "@assets/images/customers/customer-3.png";
+import customer4 from "@assets/images/customers/customer-4.png";
+import customer5 from "@assets/images/customers/customer-5.png";
+import ReviewCard from "@components/sections/Home/ReviewSection/ReviewCard";
 
-const Reviews = () => {
+const ReviewSection = () => {
   const reviewsData = [
     {
       id: 1,
@@ -70,4 +69,4 @@ const Reviews = () => {
   );
 };
 
-export default Reviews;
+export default ReviewSection;

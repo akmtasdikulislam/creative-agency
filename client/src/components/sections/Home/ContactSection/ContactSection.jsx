@@ -1,7 +1,6 @@
-import React from "react";
-import ContactUsForm from "./ContactUsForm";
+import ContactForm from "@components/sections/Home/ContactSection/ContactForm";
 
-const ContactUs = () => {
+const ContactSection = () => {
   return (
     <section className="bg-primary xl:px-30 mt-10 flex flex-col justify-between gap-10 px-5 py-10 md:flex-row md:px-10 lg:px-20">
       <div className="md:1/2 flex-auto xl:max-w-lg">
@@ -14,10 +13,10 @@ const ContactUs = () => {
         </p>
       </div>
       <div className="flex-auto md:w-1/2 xl:max-w-lg">
-        <ContactUsForm />
+        <ContactForm />
       </div>
     </section>
   );
 };
 
-export default ContactUs;
+export default ContactSection;

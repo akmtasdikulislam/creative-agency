@@ -1,0 +1,25 @@
+@reference "tailwindcss";
+
+body {
+  @apply min-w-screen min-h-screen overflow-x-hidden;
+}
+
+.nav-link {
+  @apply font-medium underline-offset-5;
+}
+
+.nav-link:hover {
+  @apply underline decoration-2 decoration-green-600 bg-transparent text-inherit shadow-none;
+}
+
+.btn-neutral {
+  @apply shadow-none px-10;
+}
+
+.clip-diagonal {
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+a.active {
+  @apply underline decoration-2 decoration-green-600;
+}

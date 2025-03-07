@@ -1,23 +1,22 @@
-import React from "react";
+import portfolio1 from "@assets/images/portfolio/portfolio-1.png";
+import portfolio2 from "@assets/images/portfolio/portfolio-2.png";
+import portfolio3 from "@assets/images/portfolio/portfolio-3.png";
+import portfolio4 from "@assets/images/portfolio/portfolio-4.png";
+import portfolio5 from "@assets/images/portfolio/portfolio-5.png";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import carousel1 from "../../../assets/images/carousels/carousel-1.png";
-import carousel2 from "../../../assets/images/carousels/carousel-2.png";
-import carousel3 from "../../../assets/images/carousels/carousel-3.png";
-import carousel4 from "../../../assets/images/carousels/carousel-4.png";
-import carousel5 from "../../../assets/images/carousels/carousel-5.png";
 import "./PortfolioCarousel.css";
 
 const PortfolioCarousel = () => {
   const works = [
-    { id: 1, image: carousel1 },
-    { id: 2, image: carousel2 },
-    { id: 3, image: carousel3 },
-    { id: 4, image: carousel4 },
-    { id: 5, image: carousel5 },
+    { id: 1, image: portfolio1 },
+    { id: 2, image: portfolio2 },
+    { id: 3, image: portfolio3 },
+    { id: 4, image: portfolio4 },
+    { id: 5, image: portfolio5 },
   ];
 
   return (

@@ -1,14 +1,13 @@
-import React from "react";
+import service1 from "@assets/icons/service-icons/service1.png";
+import service2 from "@assets/icons/service-icons/service2.png";
+import service3 from "@assets/icons/service-icons/service3.png";
+import service4 from "@assets/icons/service-icons/service4.png";
+import service5 from "@assets/icons/service-icons/service5.png";
+import ServiceCard from "@components/sections/Home/ServiceSection/ServiceCard";
 import { HiArrowRight } from "react-icons/hi2";
 import { Link } from "react-router";
-import service1 from "../../../assets/images/icons/service1.png";
-import service2 from "../../../assets/images/icons/service2.png";
-import service3 from "../../../assets/images/icons/service3.png";
-import service4 from "../../../assets/images/icons/service4.png";
-import service5 from "../../../assets/images/icons/service5.png";
-import ServiceCard from "./ServiceCard";
 
-const Services = () => {
+const ServiceSection = () => {
   const servicesData = [
     {
       id: 1,
@@ -70,4 +69,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default ServiceSection;

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { NavLink } from "react-router";
-import logo from "../../../assets/images/logos/logo.png";
+import logo from "/assets/images/logos/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleNavMenu = () => {

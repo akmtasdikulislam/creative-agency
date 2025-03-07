@@ -1,6 +1,5 @@
+import fallbackAvatar from "@assets/images/customers/fallbackAvatar.png";
 import PropTypes from "prop-types";
-import React from "react";
-import fallbackAvatar from "../../../assets/images/customers/fallbackAvatar.png";
 const ReviewCard = ({ review }) => {
   const { name, imageUrl, reviewText, designation, companyName } = review;
 

@@ -1,11 +1,10 @@
-import React from "react";
-import airbnbLogo from "../../assets/images/logos/airbnb.png";
-import googleLogo from "../../assets/images/logos/google.png";
-import netflixLogo from "../../assets/images/logos/netflix.png";
-import slackLogo from "../../assets/images/logos/slack.png";
-import uberLogo from "../../assets/images/logos/uber.png";
+import airbnbLogo from "@assets/images/brand-partners/airbnb.png";
+import googleLogo from "@assets/images/brand-partners/google.png";
+import netflixLogo from "@assets/images/brand-partners/netflix.png";
+import slackLogo from "@assets/images/brand-partners/slack.png";
+import uberLogo from "@assets/images/brand-partners/uber.png";
 
-const TrustedPartners = () => {
+const BrandPartners = () => {
   const partners = [
     { id: 1, name: "Slack", image: slackLogo },
     { id: 2, name: "Google", image: googleLogo },
@@ -26,4 +25,4 @@ const TrustedPartners = () => {
   );
 };
 
-export default TrustedPartners;
+export default BrandPartners;

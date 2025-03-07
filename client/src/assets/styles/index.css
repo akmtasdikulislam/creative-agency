@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@theme {
+
+    --color-primary      : oklch(87.41% 0.1362 87.91);
+    --color-secondary    : oklch(70.33% 0.1251 135.97);
+    --color-success      : oklch(75% 0.16 145);
+    --color-neutral-color: oklch(55.04% 0 0);
+    --color-default-color: oklch(20.78% 0.0515 274.45);
+}
+
 @plugin "daisyui/theme" {
     name        : "creative-agency";
     default     : true;
@@ -14,22 +23,18 @@
     --color-base-content: oklch(24% 0.05 250);
 
     /* Brand Colors */
-    --color-primary          : oklch(85% 0.20 80);
+    --color-primary          : oklch(87.41% 0.1362 87.91);
     --color-primary-content  : oklch(10% 0 0);
-    --color-secondary        : oklch(72% 0.18 230);
+    --color-secondary        : oklch(70.33% 0.1251 135.97);
     --color-secondary-content: oklch(10% 0 0);
-    --color-accent           : oklch(75% 0.16 145);
+    --color-accent           : oklch(20.78% 0.0515 274.45);
     --color-accent-content   : oklch(10% 0 0);
     --color-neutral          : oklch(24% 0.05 250);
     --color-neutral-content  : oklch(100% 0 0);
 
     /* State Colors */
-    --color-info           : oklch(72% 0.18 230);
-    --color-info-content   : oklch(10% 0 0);
-    --color-success        : oklch(75% 0.16 145);
-    --color-success-content: oklch(10% 0 0);
-    --color-warning        : oklch(80% 0.18 75);
-    --color-warning-content: oklch(15% 0.03 80);
-    --color-error          : oklch(73% 0.18 27);
-    --color-error-content  : oklch(15% 0.04 27);
+    --color-info   : oklch(72% 0.18 230);
+    --color-success: oklch(75% 0.16 145);
+    --color-warning: oklch(80% 0.18 75);
+    --color-error  : oklch(59.5% 0.2322 27);
 }
