@@ -1,20 +1,21 @@
-import React from "react";
-import ContactUs from "../../components/Home/ContactUs/ContactUs";
-import Header from "../../components/Home/Header/Header";
-import OurWorks from "../../components/Home/OurWorks/OurWorks";
-import Reviews from "../../components/Home/Reviews/Reviews";
-import Services from "../../components/Home/Services/Services";
-import TrustedPartners from "../../components/TrustedPartners/TrustedPartners";
+import BrandPartners from "@components/sections/Home/BrandPartners/BrandPartners";
+import ContactSection from "@components/sections/Home/ContactSection/ContactSection";
+import MainHeader from "@components/sections/Home/MainHeader/MainHeader";
+import PortfolioSection from "@components/sections/Home/PortfolioSection/PortfolioSection";
+import ReviewSection from "@components/sections/Home/ReviewSection/ReviewSection";
+import ServiceSection from "@components/sections/Home/ServiceSection/ServiceSection";
 
 const Home = () => {
   return (
     <main className="max-w-screen min-h-screen">
-      <Header />
-      <TrustedPartners />
-      <Services />
-      <OurWorks />
-      <Reviews />
-      <ContactUs />
+      <MainHeader />
+      <BrandPartners />
+      <ServiceSection />
+      <PortfolioSection />
+      <ReviewSection />
+      <ContactSection />
+      {/*
+      <ContactUs /> */}
     </main>
   );
 };

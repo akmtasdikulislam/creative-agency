@@ -1,6 +1,6 @@
+import Navbar from "@components/layout/Navigation/Navbar";
+import HeroSection from "@components/sections/Home/HeroSection/HeroSection";
 import React from "react";
-import Navbar from "../../shared/Navbar/Navbar";
-import HeroSection from "./HeroSection/HeroSection";
 
 const MainHeader = () => {
   return (

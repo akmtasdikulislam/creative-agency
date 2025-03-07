@@ -1,5 +1,4 @@
-import React from "react";
-import PortfolioCarousel from "./PortfolioCarousel";
+import PortfolioCarousel from "@components/sections/Home/PortfolioSection/PortfolioCarousel";
 
 const PortfolioSection = () => {
   return (
