@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button/Button";
 import Logo from "@/components/common/Logo/Logo";
 import { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
@@ -48,7 +49,7 @@ const Navbar = () => {
             </NavLink>
           </li>
         </ul>
-        <a className="btn btn-neutral">Login</a>
+        <Button variant="primary">Login</Button>
         <button
           onClick={handleNavMenu}
           className="btn focus:text-secondary active:text-secondary hover:text-secondary absolute right-1 top-3 border-none bg-transparent shadow-none md:hidden"
