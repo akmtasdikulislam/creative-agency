@@ -9,7 +9,9 @@ const SortOptions = () => {
     <div className="flex items-center">
       <span className="mr-2 text-sm">Sort by:</span>
       <select
-        className={`select select-bordered select-sm w-40 ${selectedSort && "rounded-r-none"} !outline-none !ring-0`}
+        className={`select select-bordered select-sm w-40 ${
+          selectedSort && "rounded-r-none"
+        } hover:border-neutral !outline-none !ring-0 transition-colors hover:cursor-pointer`}
         value={selectedSort}
         onChange={(e) => {
           e.target.value !== selectedSort && setSelectedSort(e.target.value);
