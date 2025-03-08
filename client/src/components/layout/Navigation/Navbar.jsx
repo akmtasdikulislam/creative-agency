@@ -1,7 +1,7 @@
+import Logo from "@/components/common/Logo/Logo";
 import { useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { NavLink } from "react-router";
-import logo from "/assets/images/logos/logo.png";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleNavMenu = () => {
@@ -11,10 +11,8 @@ const Navbar = () => {
 
   return (
     <nav className="navbar max-w-screen xl:px-30 bg-primary relative mb-0 flex w-screen max-md:items-center max-md:justify-center md:justify-between md:px-10 md:py-10 lg:px-20">
-      <div className="">
-        <a className="btn btn-ghost border-none text-xl hover:border-none hover:bg-transparent hover:shadow-none">
-          <img src={logo} alt="Creative Agency" className="w-32" />
-        </a>
+      <div>
+        <Logo />
       </div>
       <div
         className={`max-md:bg-base-100 max-md:p-15 transition-all duration-500 max-md:absolute max-md:top-0 max-md:z-10 max-md:flex max-md:h-screen max-md:w-fit max-md:flex-col max-md:justify-between max-md:shadow-2xl lg:flex-none ${isOpen ? "right-0" : "-right-full"}`}
