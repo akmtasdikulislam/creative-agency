@@ -4,7 +4,7 @@ import Navbar from "../Navigation/Navbar";
 
 const MainLayout = () => {
   return (
-    <main className="max-w-screen relative min-h-full">
+    <main className="max-w-screen relative min-h-screen">
       <Navbar />
       <Outlet />
       <Footer />
