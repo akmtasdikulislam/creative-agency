@@ -1,3 +1,4 @@
+import ServicesList from "@/components/features/ServicesList/ServicesList";
 import service1 from "@assets/icons/service-icons/service1.png";
 import service2 from "@assets/icons/service-icons/service2.png";
 import service3 from "@assets/icons/service-icons/service3.png";
@@ -60,11 +61,11 @@ const ServiceSection = () => {
           View all <HiArrowRight size={""} />
         </Link>
       </div>
-      <div className="xl:px-30 mt-10 flex flex-wrap items-center justify-center gap-5 px-5 md:px-10">
+      <ServicesList className={"mt-10"}>
         {servicesData.map((service) => (
           <ServiceCard key={service.id} service={service} />
         ))}
-      </div>
+      </ServicesList>
     </section>
   );
 };
