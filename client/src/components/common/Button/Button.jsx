@@ -22,7 +22,7 @@ const Button = ({
   // DaisyUI variant classes
   const variantClasses = {
     primary:
-      "bg-zinc-950 hover:bg-zinc-800 active:bg-opacity-100 text-white border-none px-10 transition-all duration-300 ease-in-out hover:shadow-md",
+      "btn bg-zinc-950 hover:bg-zinc-800 active:bg-opacity-100 text-white border-none px-10 transition-all duration-300 ease-in-out hover:shadow-lg",
     secondary: "btn-secondary",
     outline: "btn-outline",
     danger: "btn-error",
