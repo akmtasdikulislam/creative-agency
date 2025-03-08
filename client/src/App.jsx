@@ -1,10 +1,11 @@
 import "@assets/styles/global.css";
-import Home from "./pages/Home/Home";
+import { RouterProvider } from "react-router";
+import router from "./Routes";
 
 function App() {
   return (
     <>
-      <Home />
+      <RouterProvider router={router} />
     </>
   );
 }
