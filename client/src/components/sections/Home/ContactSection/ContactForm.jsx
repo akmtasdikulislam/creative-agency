@@ -1,4 +1,4 @@
-import React from "react";
+import Button from "@/components/common/Button/Button";
 import { useForm } from "react-hook-form";
 
 const ContactUsForm = () => {
@@ -86,7 +86,7 @@ const ContactUsForm = () => {
         )}
       </div>
 
-      <button
+      <Button
         type="submit"
         className={`btn btn-neutral`}
         disabled={isSubmitting}
@@ -99,7 +99,7 @@ const ContactUsForm = () => {
         ) : (
           "Submit"
         )}
-      </button>
+      </Button>
     </form>
   );
 };
