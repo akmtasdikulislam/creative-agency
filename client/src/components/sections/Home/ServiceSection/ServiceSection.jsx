@@ -1,10 +1,10 @@
+import ServiceCard from "@/components/features/MainLayout/SerivceCards/ServiceCard";
 import ServicesList from "@/components/features/ServicesList/ServicesList";
 import service1 from "@assets/icons/service-icons/service1.png";
 import service2 from "@assets/icons/service-icons/service2.png";
 import service3 from "@assets/icons/service-icons/service3.png";
 import service4 from "@assets/icons/service-icons/service4.png";
 import service5 from "@assets/icons/service-icons/service5.png";
-import ServiceCard from "@components/sections/Home/ServiceSection/ServiceCard";
 import { HiArrowRight } from "react-icons/hi2";
 import { Link } from "react-router";
 

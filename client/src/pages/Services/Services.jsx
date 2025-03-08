@@ -1,5 +1,5 @@
+import ServiceCard from "@/components/features/MainLayout/SerivceCards/ServiceCard";
 import ServicesList from "@/components/features/ServicesList/ServicesList";
-import ServiceCard from "@/components/sections/Home/ServiceSection/ServiceCard";
 import ServicesActionBar from "@/components/sections/Services/ServicesActionBar/ServicesActionBar";
 import ServicesHeader from "@/components/sections/Services/ServicesHeader/ServicesHeader";
 import { updateTitle } from "@/utils/updateTitle";
