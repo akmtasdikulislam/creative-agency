@@ -12,10 +12,6 @@ body {
   @apply underline decoration-2 decoration-green-600 bg-transparent text-inherit shadow-none;
 }
 
-.btn-neutral {
-  @apply shadow-none px-10;
-}
-
 .clip-diagonal {
   clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 }
