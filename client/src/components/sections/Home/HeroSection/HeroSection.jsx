@@ -1,3 +1,4 @@
+import Button from "@/components/common/Button/Button";
 import HeroIllustration from "@assets/images/hero-section/hero-illustration.png";
 
 const HeroSection = () => {
@@ -12,7 +13,7 @@ const HeroSection = () => {
           innovative digital solutions. We specialize in creating impactful
           strategies and stunning designs that drive real results.
         </p>
-        <button className="btn btn-neutral">Hire us</button>
+        <Button variant="primary">Hire us</Button>
       </div>
       <div className="xl:max-w-2/4 md:max-w-2/3 2xl:max-w-auto h-fit w-full flex-auto 2xl:h-full">
         <img
