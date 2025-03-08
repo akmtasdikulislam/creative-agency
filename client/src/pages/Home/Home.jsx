@@ -1,3 +1,4 @@
+import FooterSection from "@/components/sections/Home/FooterSection/FooterSection";
 import BrandPartners from "@components/sections/Home/BrandPartners/BrandPartners";
 import ContactSection from "@components/sections/Home/ContactSection/ContactSection";
 import MainHeader from "@components/sections/Home/MainHeader/MainHeader";
@@ -14,8 +15,7 @@ const Home = () => {
       <PortfolioSection />
       <ReviewSection />
       <ContactSection />
-      {/*
-      <ContactUs /> */}
+      <FooterSection />
     </main>
   );
 };
