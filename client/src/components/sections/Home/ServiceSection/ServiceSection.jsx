@@ -55,7 +55,7 @@ const ServiceSection = () => {
           Provide awesome <span className="text-highlight">services</span>
         </h2>
         <Link
-          className="flex -translate-y-1/2 items-center justify-center gap-2 underline underline-offset-2 hover:no-underline sm:absolute sm:right-8 sm:top-1/2 md:right-20"
+          className="flex -translate-y-1/2 items-center justify-center gap-2 underline underline-offset-2 sm:absolute sm:right-8 sm:top-1/2 md:right-20"
           to="/services"
         >
           View all <HiArrowRight />
