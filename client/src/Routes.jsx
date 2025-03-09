@@ -4,6 +4,7 @@ import ForgotPassword from "@pages/Auth/ForgotPassword/ForgotPassword";
 import SignIn from "@pages/Auth/SignIn/SignIn";
 import SignUp from "@pages/Auth/SignUp/SignUp";
 import Home from "@pages/Home/Home";
+import NotFound from "@pages/NotFound/NotFound";
 import Services from "@pages/Services/Services";
 import { createBrowserRouter } from "react-router";
 
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
         element: <ForgotPassword />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: <NotFound />,
   },
 ]);
 
