@@ -1,7 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="bg-primary text-neutral-color p-10 text-center">
-      <p>copyright Orange Labs 2020</p>
+    <footer className="bg-primary text-text-secondary p-10 text-center">
+      <p className="body-sm">
+        © {new Date().getFullYear()} Orange Labs. All rights reserved.
+      </p>
     </footer>
   );
 };

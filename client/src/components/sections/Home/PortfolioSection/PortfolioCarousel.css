@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .swiper {
     padding-bottom: 70px !important;
 }
@@ -21,6 +23,11 @@
     background: rgba(255, 255, 255, 0.2) !important;
     opacity   : 1 !important;
     margin    : 0 5px !important;
+  transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover{
+    background: #ffd87d !important;
 }
 
 .swiper-pagination-bullet-active {

@@ -1,5 +1,3 @@
-import React from "react";
-
 const ServiceCard = ({ service }) => {
   const { title, description, imageUrl } = service;
   return (
@@ -8,8 +6,8 @@ const ServiceCard = ({ service }) => {
         <img src={imageUrl} alt={title} className="h-auto w-20 rounded-full" />
       </figure>
       <div className="card-body items-center text-center">
-        <h2 className="card-title font-bold">{title}</h2>
-        <p className="text-neutral-color">{description}</p>
+        <h5 className="card-title">{title}</h5>
+        <p className="text-text-secondary body-sm">{description}</p>
       </div>
     </div>
   );

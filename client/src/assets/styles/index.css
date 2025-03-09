@@ -1,45 +1,476 @@
+/* prettier-ignore */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import "tailwindcss";
-@plugin "daisyui";
 
-@theme inline {
-    --default-font-family: var(--font-primary);
-    --font-primary       : 'Open Sans', sans-serif;
-    --font-secondary     : 'Poppins', sans-serif;
+/* 
+ * Merged Creative Agency & UI Design Theme
+ * Updated accent color to #11152F in oklch + all colors in oklch
+ */
 
-    --color-primary      : oklch(87.41% 0.1362 87.91);
-    --color-secondary    : oklch(70.33% 0.1251 135.97);
-    --color-success      : oklch(75% 0.16 145);
-    --color-neutral-color: oklch(55.04% 0 0);
-    --color-default-color: oklch(20.78% 0.0515 274.45);
+@theme {
+  /* ---------------------------------------------------------
+     BRAND COLORS (oklch)
+  --------------------------------------------------------- */
+  /* Primary brand - Gold/Yellow */
+  --color-primary: oklch(0.85 0.15 85);  /* Base */
+  --color-primary-50: oklch(0.97 0.06 85);
+  --color-primary-100: oklch(0.95 0.08 85);
+  --color-primary-200: oklch(0.92 0.10 85);
+  --color-primary-300: oklch(0.90 0.12 85);
+  --color-primary-400: oklch(0.87 0.14 85);
+  --color-primary-500: oklch(0.85 0.15 85);
+  --color-primary-600: oklch(0.80 0.17 85);
+  --color-primary-700: oklch(0.75 0.18 85);
+  --color-primary-800: oklch(0.70 0.17 85);
+  --color-primary-900: oklch(0.65 0.16 85);
+  --color-primary-950: oklch(0.60 0.15 85);
+
+  /* Secondary dark navy */
+  --color-secondary: oklch(0.18 0.03 265); /* Base */
+  --color-secondary-50: oklch(0.95 0.01 265);
+  --color-secondary-100: oklch(0.90 0.01 265);
+  --color-secondary-200: oklch(0.80 0.02 265);
+  --color-secondary-300: oklch(0.70 0.02 265);
+  --color-secondary-400: oklch(0.50 0.03 265);
+  --color-secondary-500: oklch(0.40 0.03 265);
+  --color-secondary-600: oklch(0.30 0.03 265);
+  --color-secondary-700: oklch(0.25 0.03 265);
+  --color-secondary-800: oklch(0.20 0.03 265);
+  --color-secondary-900: oklch(0.18 0.03 265);
+  --color-secondary-950: oklch(0.15 0.03 265);
+
+  /* ACCENT color: #11152F (oklch base ~ L=0.13, c=0.03, h=265) */
+  --color-accent: oklch(0.13 0.03 265); /* Base => accent-500 */
+  --color-accent-50: oklch(0.97 0.01 265);
+  --color-accent-100: oklch(0.93 0.01 265);
+  --color-accent-200: oklch(0.85 0.02 265);
+  --color-accent-300: oklch(0.70 0.02 265);
+  --color-accent-400: oklch(0.50 0.03 265);
+  --color-accent-500: oklch(0.13 0.03 265); /* #11152F */
+  --color-accent-600: oklch(0.11 0.03 265);
+  --color-accent-700: oklch(0.09 0.03 265);
+  --color-accent-800: oklch(0.07 0.03 265);
+  --color-accent-900: oklch(0.05 0.03 265);
+  --color-accent-950: oklch(0.03 0.03 265);
+
+  /* ---------------------------------------------------------
+     SEMANTIC STATUS COLORS (oklch)
+  --------------------------------------------------------- */
+  /* Success (Done) */
+  --color-success: oklch(0.85 0.10 145);
+  --color-success-50: oklch(0.97 0.03 145);
+  --color-success-100: oklch(0.95 0.05 145);
+  --color-success-200: oklch(0.92 0.06 145);
+  --color-success-300: oklch(0.90 0.08 145);
+  --color-success-400: oklch(0.87 0.09 145);
+  --color-success-500: oklch(0.85 0.10 145);
+  --color-success-600: oklch(0.75 0.12 145);
+  --color-success-700: oklch(0.65 0.13 145);
+  --color-success-800: oklch(0.50 0.12 145);
+  --color-success-900: oklch(0.40 0.10 145);
+  --color-success-950: oklch(0.30 0.08 145);
+
+  /* Error (Pending) */
+  --color-error: oklch(0.85 0.10 30);
+  --color-error-50: oklch(0.97 0.03 30);
+  --color-error-100: oklch(0.95 0.04 30);
+  --color-error-200: oklch(0.93 0.06 30);
+  --color-error-300: oklch(0.90 0.08 30);
+  --color-error-400: oklch(0.87 0.10 30);
+  --color-error-500: oklch(0.85 0.10 30);
+  --color-error-600: oklch(0.75 0.15 30);
+  --color-error-700: oklch(0.65 0.18 30);
+  --color-error-800: oklch(0.55 0.20 30);
+  --color-error-900: oklch(0.45 0.18 30);
+  --color-error-950: oklch(0.35 0.15 30);
+
+  /* Warning (On going) */
+  --color-warning: oklch(0.85 0.13 60);
+  --color-warning-50: oklch(0.97 0.03 60);
+  --color-warning-100: oklch(0.95 0.05 60);
+  --color-warning-200: oklch(0.93 0.07 60);
+  --color-warning-300: oklch(0.90 0.09 60);
+  --color-warning-400: oklch(0.87 0.11 60);
+  --color-warning-500: oklch(0.85 0.13 60);
+  --color-warning-600: oklch(0.80 0.15 60);
+  --color-warning-700: oklch(0.75 0.17 60);
+  --color-warning-800: oklch(0.65 0.16 60);
+  --color-warning-900: oklch(0.55 0.14 60);
+  --color-warning-950: oklch(0.45 0.12 60);
+
+  /* Info */
+  --color-info: oklch(0.80 0.10 230);
+  --color-info-50: oklch(0.97 0.03 230);
+  --color-info-100: oklch(0.95 0.04 230);
+  --color-info-200: oklch(0.93 0.06 230);
+  --color-info-300: oklch(0.90 0.07 230);
+  --color-info-400: oklch(0.85 0.09 230);
+  --color-info-500: oklch(0.80 0.10 230);
+  --color-info-600: oklch(0.75 0.12 230);
+  --color-info-700: oklch(0.65 0.14 230);
+  --color-info-800: oklch(0.55 0.13 230);
+  --color-info-900: oklch(0.45 0.12 230);
+  --color-info-950: oklch(0.35 0.10 230);
+
+  /* Basic colors */
+  --color-white: oklch(1 0 0);
+  --color-black: oklch(0 0 0);
+
+  /* ---------------------------------------------------------
+     ADDITIONAL UI TOKENS 
+  --------------------------------------------------------- */
+  /* Text Colors */
+  --color-text-primary: oklch(0.18 0.03 265);
+  --color-text-secondary: oklch(0.52 0.02 255);
+  --color-text-tertiary: oklch(0.58 0.03 250);
+  --color-text-light: oklch(1 0 0);
+
+  /* UI Backgrounds & Borders */
+  --color-background: oklch(1 0 0);
+  --color-background-alt: oklch(0.98 0.01 240);
+  --color-border: oklch(0.91 0.01 240);
+  --color-input: oklch(0.98 0.005 240);
+
+  /* Highlight color */
+  --color-highlight: oklch(0.70 0.1251 135.97);
+
+  /* ---------------------------------------------------------
+     BUTTON SYSTEM TOKENS
+  --------------------------------------------------------- */ 
+  /* Primary Button */
+  --btn-primary-bg: var(--color-primary-500);
+  --btn-primary-text: var(--color-secondary);
+  --btn-primary-hover: oklch(0.80 0.17 85);
+  --btn-primary-active: oklch(0.75 0.18 85);
+
+  /* Secondary Button */
+  --btn-secondary-bg: var(--color-secondary);
+  --btn-secondary-text: oklch(1 0 0);
+  --btn-secondary-hover: oklch(0.20 0.03 265);
+  --btn-secondary-active: oklch(0.25 0.03 265);
+
+  /* Tertiary Button */
+  --btn-tertiary-bg: transparent;
+  --btn-tertiary-border: var(--color-primary-500);
+  --btn-tertiary-text: var(--color-secondary);
+  --btn-tertiary-hover: rgba(255, 206, 84, 0.1);
+  --btn-tertiary-active: rgba(255, 206, 84, 0.2);
+
+  /* Destructive Button */
+  --btn-destructive-bg: oklch(0.66 0.24 27);
+  --btn-destructive-text: oklch(1 0 0);
+  --btn-destructive-hover: oklch(0.57 0.24 27);
+  --btn-destructive-active: oklch(0.53 0.24 27);
+
+  /* Cancel Button */
+  --btn-cancel-bg: oklch(0.67 0.03 240);
+  --btn-cancel-text: oklch(1 0 0);
+  --btn-cancel-hover: oklch(0.61 0.03 240);
+  --btn-cancel-active: oklch(0.58 0.03 240);
+
+  /* ---------------------------------------------------------
+     STATUS BADGE TOKENS
+  --------------------------------------------------------- */
+  --badge-success-bg: var(--color-success-500);
+  --badge-success-text: oklch(0.65 0.13 145);
+  --badge-pending-bg: var(--color-error-500);
+  --badge-pending-text: oklch(0.65 0.18 30);
+  --badge-ongoing-bg: var(--color-warning-500);
+  --badge-ongoing-text: oklch(0.65 0.16 60);
+  --badge-info-bg: var(--color-info-500);
+  --badge-info-text: oklch(0.55 0.13 230);
+
+  /* ---------------------------------------------------------
+     FORM INPUT TOKENS
+  --------------------------------------------------------- */
+  --form-input-bg: var(--color-input);
+  --form-input-border: var(--color-border);
+  --form-input-focus-border: var(--color-primary-500);
+  --form-input-error-border: oklch(0.66 0.24 27);
+  --form-input-error-bg: oklch(0.97 0.02 20);
+
+  /* ---------------------------------------------------------
+     LINK TOKENS
+  --------------------------------------------------------- */
+--link-primary: var(--color-primary-600);
+
+    --link-hover: var(--color-primary-700);
+
+    --link-active: var(--color-primary-800);
+
+    --link-visited: var(--color-primary-900);
+
+  /* ---------------------------------------------------------
+     TYPOGRAPHY & OTHER TOKENS
+  --------------------------------------------------------- */
+  /* Font Families */
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-open-sans: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Font Sizes */
+  --text-h1: 3rem;      /* 48px */
+  --text-h2: 2.25rem;   /* 36px */
+  --text-h3: 1.875rem;  /* 30px */
+  --text-h4: 1.5rem;    /* 24px */
+  --text-h5: 1.25rem;   /* 20px */
+  --text-h6: 1.125rem;  /* 18px */
+  --text-base: 1rem;    /* 16px */
+  --text-sm: 0.875rem;  /* 14px */
+  --text-xs: 0.75rem;   /* 12px */
+  --text-2xs: 0.625rem; /* 10px */
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.125rem;
+  --radius-DEFAULT: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-DEFAULT: 0 1px 3px 0 rgb(0 0 0 / 0.1),
+    0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+    0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1),
+    0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
 }
 
+@layer base {
+  /* 1) Base font => Poppins by default */
+  html {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+    color: var(--color-text-primary);
+  }
+
+  /* 2) Headings use "Open Sans" + responsive text sizes */
+  h1,
+  .h1,
+  .heading-1 {
+    @apply font-open-sans font-bold text-h1 sm:text-4xl md:text-5xl xl:text-6xl leading-tight;
+  }
+
+  h2,
+  .h2,
+  .heading-2 {
+    @apply font-open-sans font-bold text-h2 sm:text-3xl md:text-4xl leading-snug;
+  }
+
+  h3,
+  .h3,
+  .heading-3 {
+    @apply font-open-sans font-semibold text-h3 sm:text-2xl md:text-3xl;
+  }
+
+  h4,
+  .h4,
+  .heading-4 {
+    @apply font-open-sans font-medium text-h4 sm:text-xl md:text-2xl;
+  }
+
+  h5,
+  .h5,
+  .heading-5 {
+    @apply font-open-sans font-medium text-h5 sm:text-lg md:text-xl;
+  }
+
+  h6,
+  .h6,
+  .heading-6 {
+    @apply font-open-sans font-medium text-h6 sm:text-sm md:text-lg;
+  }
+
+  /* 3) Paragraphs & smaller text => Poppins or Open Sans? 
+     (Here we use the "font-sans" var, which is Poppins.)
+   */
+  p,
+  .body-text {
+    @apply font-sans text-base leading-relaxed;
+  }
+
+  .body-sm {
+    @apply font-sans text-sm;
+  }
+
+  .body-xs {
+    @apply font-sans text-xs;
+  }
+
+  .body-2xs {
+    @apply font-sans text-2xs;
+  }
+
+  /* 4) Link styles (states: hover, active, visited) */
+  a {
+    @apply underline decoration-transparent transition-colors duration-200 text-[var(--link-primary)];
+  }
+
+  a:hover {
+    @apply text-[var(--link-hover)] decoration-[var(--link-hover)];
+  }
+
+  a:focus-visible {
+    @apply outline-2 outline-offset-2 outline-[var(--link-primary)];
+  }
+
+  a:active {
+    @apply text-[var(--link-active)] decoration-[var(--link-active)];
+  }
+
+  a:visited {
+    @apply text-[var(--link-visited)];
+  }
+}
+/* ---------------------------------------------------------
+   Custom Component Styles
+   (These are placed in the @layer components section)
+--------------------------------------------------------- */
+@layer components {
+  /* Button Base */
+  .btn {
+    @apply inline-flex items-center justify-center rounded-DEFAULT px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2;
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-secondary hover:bg-primary-600 focus-visible:outline-primary-500 active:bg-primary-700;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary-900 text-white hover:bg-secondary-800 focus-visible:outline-secondary-900 active:bg-secondary-700;
+  }
+
+  .btn-tertiary {
+    @apply bg-transparent border border-primary-500 text-secondary hover:bg-primary-50 focus-visible:outline-primary-500;
+  }
+
+  .btn-destructive {
+    @apply bg-[oklch(0.66_0.24_27)] text-[oklch(1_0_0)] hover:bg-[oklch(0.57_0.24_27)] focus-visible:outline-[oklch(0.66_0.24_27)] active:bg-[oklch(0.53_0.24_27)];
+  }
+
+  .btn-cancel {
+    @apply bg-[oklch(0.67_0.03_240)] text-[oklch(1_0_0)] hover:bg-[oklch(0.61_0.03_240)] focus-visible:outline-[oklch(0.67_0.03_240)] active:bg-[oklch(0.58_0.03_240)];
+  }
+
+  /* Status Badges */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-success-500 text-success-900;
+  }
+
+  .badge-pending {
+    @apply bg-error-500 text-error-900;
+  }
+
+  .badge-ongoing {
+    @apply bg-warning-500 text-warning-900;
+  }
+
+  .badge-info {
+    @apply bg-info-500 text-info-900;
+  }
+
+  /* Form Inputs */
+  .input {
+    @apply block w-full rounded-DEFAULT border border-[oklch(0.91_0.01_240)] bg-[oklch(0.98_0.005_240)] px-3 py-2 text-[oklch(0.18_0.03_265)] placeholder-[oklch(0.52_0.02_255)] shadow-sm focus:border-primary-500 focus:ring-primary-500 focus:outline-none;
+  }
+
+  .input-error {
+    @apply border-[oklch(0.66_0.24_27)] bg-[oklch(0.97_0.02_20)] focus:border-[oklch(0.66_0.24_27)] focus:ring-[oklch(0.66_0.24_27)];
+  }
+
+  /* Alerts/Toasts */
+  .alert {
+    @apply rounded-DEFAULT p-4 border-l-4;
+  }
+
+  .alert-success {
+    @apply bg-success-50 border-l-success-500 text-success-900;
+  }
+
+  .alert-error {
+    @apply bg-error-50 border-l-error-500 text-error-900;
+  }
+
+  .alert-warning {
+    @apply bg-warning-50 border-l-warning-500 text-warning-900;
+  }
+
+  .alert-info {
+    @apply bg-info-50 border-l-info-500 text-info-900;
+  }
+}
+
+@plugin "daisyui";
+
 @plugin "daisyui/theme" {
-    name        : "creative-agency";
-    default     : true;
-    prefersdark : false;
-    color-scheme: light;
+  name: "creative-agency";
+  default: true;     /* set as default theme */
+  prefersdark: false; /* not the dark mode theme */
+  color-scheme: light;
 
-    /* Base Colors */
-    --color-base-100    : oklch(100% 0 0);
-    --color-base-200    : oklch(95% 0.03 240);
-    --color-base-300    : oklch(90% 0.04 240);
-    --color-base-content: oklch(24% 0.05 250);
+  /* Base Colors */
+  --color-base-100: oklch(1 0 0);
+  --color-base-200: oklch(0.98 0.01 240);
+  --color-base-300: oklch(0.91 0.01 240);
+  --color-base-content: oklch(0.18 0.03 265);
 
-    /* Brand Colors */
-    --color-primary          : oklch(87.41% 0.1362 87.91);
-    --color-primary-content  : oklch(10% 0 0);
-    --color-secondary        : oklch(70.33% 0.1251 135.97);
-    --color-secondary-content: oklch(10% 0 0);
-    --color-accent           : oklch(20.78% 0.0515 274.45);
-    --color-accent-content   : oklch(10% 0 0);
-    --color-neutral          : oklch(24% 0.05 250);
-    --color-neutral-content  : oklch(100% 0 0);
+  /* Brand / Semantic */
+  --color-primary: oklch(0.85 0.15 85);
+  --color-primary-content: oklch(0.18 0.03 265);
 
-    /* State Colors */
-    --color-info   : oklch(72% 0.18 230);
-    --color-success: oklch(75% 0.16 145);
-    --color-warning: oklch(80% 0.18 75);
-    --color-error  : oklch(59.5% 0.2322 27);
+  --color-secondary: oklch(0.18 0.03 265);
+  --color-secondary-content: oklch(1 0 0);
+
+  --color-accent: oklch(0.13 0.03 265);
+  --color-accent-content: oklch(1 0 0);
+
+  /* Neutral Colors */
+  --color-neutral: oklch(0.98 0.01 240);
+  --color-neutral-content: oklch(0.18 0.03 265);
+
+  /* Informational Colors */
+  --color-info: oklch(0.80 0.10 230);
+  --color-info-content: oklch(0.18 0.03 265);
+
+  /* Status Colors */
+  --color-success: oklch(0.85 0.10 145);
+  --color-success-content: oklch(1 0 0);
+
+  --color-warning: oklch(0.85 0.13 60);
+  --color-warning-content: oklch(0.18 0.03 265);
+
+  /* For error, use color-error-800 or similar */
+  --color-error: oklch(0.55 0.20 30);
+  --color-error-content: oklch(1 0 0);
+
+  /* Fonts */
+  --font-body: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* Radius & Sizing */
+  --radius-selector: 1rem;
+  --radius-field: 0.25rem;
+  --radius-box: 0.5rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+
+  /* Effects */
+  --depth: 1;
+  --noise: 0;
 }

@@ -27,7 +27,7 @@ const SortOptions = () => {
       <select
         className={`select select-bordered select-sm w-40 ${
           selectedSort && "rounded-r-none"
-        } hover:border-neutral !outline-none !ring-0 transition-colors hover:cursor-pointer`}
+        } !outline-none !ring-0 transition-colors hover:cursor-pointer hover:border-neutral-950`}
         {...register("sortOrder", {
           required: "Please select a sort order",
         })}

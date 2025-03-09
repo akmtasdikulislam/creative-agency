@@ -85,10 +85,7 @@ const AuthFormWrapper = ({
 
       {footerText && (
         <p>
-          {footerText}{" "}
-          <Link to={footerLinkTo} className="font-semibold text-violet-900">
-            {footerLinkText}
-          </Link>
+          {footerText} <Link to={footerLinkTo}>{footerLinkText}</Link>
         </p>
       )}
     </div>

@@ -20,14 +20,14 @@ const ReviewCard = ({ review }) => {
           />
         </figure>
         <div className="reviewer pt-10">
-          <p className="text-lg font-bold">{name}</p>
-          <p className="text-sm">
+          <p className="body-text">{name}</p>
+          <p className="body-xs">
             {designation}, {companyName}
           </p>
         </div>
       </div>
       <div className="card-body items-center">
-        <p className="text-neutral-color">{reviewText}</p>
+        <p className="text-text-secondary body-sm">{reviewText}</p>
       </div>
     </div>
   );

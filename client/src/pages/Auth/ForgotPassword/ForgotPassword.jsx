@@ -21,12 +21,15 @@ const ForgotPassword = () => {
   return (
     <AuthFormWrapper narrowForm={true}>
       <h1 className="mb-3 flex items-center gap-3 text-2xl font-bold">
-        <Link to="/sign-in">
+        <Link
+          to="/sign-in"
+          className="text-neutral-950 transition-all duration-300 hover:text-neutral-600"
+        >
           <HiArrowLeft />
         </Link>
         Forgot password
       </h1>
-      <p className="mb-5 text-sm text-gray-600">
+      <p className="text-text-secondary mb-5 text-sm">
         Enter your email address and we'll send you a link to reset your
         password.
       </p>
@@ -34,7 +37,7 @@ const ForgotPassword = () => {
       {isSubmitSuccessful ? (
         <div className="mb-3 rounded-md bg-green-50 p-4 text-center">
           <p className="font-medium text-green-600">Reset link sent!</p>
-          <p className="mt-1 text-sm text-gray-600">
+          <p className="text-text-tertiary mt-1 text-sm">
             Please check your email for instructions to reset your password.
           </p>
         </div>
@@ -54,9 +57,7 @@ const ForgotPassword = () => {
               })}
             />
             {errors.email && (
-              <p className="mt-1 text-sm text-red-500">
-                {errors.email.message}
-              </p>
+              <p className="text-sm text-red-500">{errors.email.message}</p>
             )}
           </fieldset>
           <Button

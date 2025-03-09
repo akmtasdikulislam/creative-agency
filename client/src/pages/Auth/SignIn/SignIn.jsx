@@ -73,9 +73,7 @@ const SignIn = () => {
               Remember me
             </label>
           </fieldset>
-          <Link to="/forgot-password" className="font-semibold text-violet-900">
-            Forgot password?
-          </Link>
+          <Link to="/forgot-password">Forgot password?</Link>
         </div>
         <Button
           variant="primary"

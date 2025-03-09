@@ -56,8 +56,8 @@ const ReviewSection = () => {
 
   return (
     <section className="2xl:max-w-7/8 my-10 md:my-20 2xl:mx-auto">
-      <h2 className="text-center text-2xl font-bold md:text-4xl">
-        Clients <span className="text-secondary">Feedback</span>
+      <h2 className="text-center">
+        Clients <span className="text-highlight">Feedback</span>
       </h2>
 
       <div className="xl:px-30 mt-10 flex flex-wrap items-center justify-center gap-5 px-5 md:px-10">

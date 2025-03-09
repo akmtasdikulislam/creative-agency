@@ -2,9 +2,9 @@ import PortfolioCarousel from "@components/sections/Home/PortfolioSection/Portfo
 
 const PortfolioSection = () => {
   return (
-    <section className="bg-accent py-16 md:py-20">
-      <h2 className="mb-12 text-center text-2xl font-bold text-white md:text-4xl">
-        Here are some of <span className="text-secondary">our works</span>
+    <section className="bg-primary-content py-16 md:py-20">
+      <h2 className="mb-12 text-center text-white">
+        Here are some of <span className="text-highlight">our works</span>
       </h2>
       <PortfolioCarousel />
     </section>

@@ -51,14 +51,14 @@ const ServiceSection = () => {
   return (
     <section className="2xl:max-w-7/8 my-10 md:my-20 2xl:mx-auto">
       <div className="flex w-full flex-col items-center justify-center gap-5 sm:relative sm:gap-0">
-        <h2 className="text-center text-2xl font-bold md:text-4xl">
-          Provide awesome <span className="text-secondary">services</span>
+        <h2 className="text-center">
+          Provide awesome <span className="text-highlight">services</span>
         </h2>
         <Link
-          className="text-secondary decoration-secondary flex -translate-y-1/2 items-center justify-center gap-2 underline underline-offset-2 hover:no-underline sm:absolute sm:right-8 sm:top-1/2 md:right-20"
+          className="flex -translate-y-1/2 items-center justify-center gap-2 underline underline-offset-2 hover:no-underline sm:absolute sm:right-8 sm:top-1/2 md:right-20"
           to="/services"
         >
-          View all <HiArrowRight size={""} />
+          View all <HiArrowRight />
         </Link>
       </div>
       <ServicesList className={"mt-10"}>
