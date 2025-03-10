@@ -327,50 +327,57 @@
 --------------------------------------------------------- */
 @layer components {
   /* Button Base */
-  .btn {
-    @apply inline-flex items-center justify-center rounded-DEFAULT px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2;
+  .tw-btn {
+    @apply inline-flex items-center justify-center rounded-DEFAULT px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 cursor-pointer duration-300;
   }
 
-  .btn-primary {
+  .tw-btn-primary {
     @apply bg-primary-500 text-secondary hover:bg-primary-600 focus-visible:outline-primary-500 active:bg-primary-700;
   }
 
-  .btn-secondary {
+  .tw-btn-secondary {
     @apply bg-secondary-900 text-white hover:bg-secondary-800 focus-visible:outline-secondary-900 active:bg-secondary-700;
   }
 
-  .btn-tertiary {
+  .tw-btn-tertiary {
     @apply bg-transparent border border-primary-500 text-secondary hover:bg-primary-50 focus-visible:outline-primary-500;
   }
 
-  .btn-destructive {
-    @apply bg-[oklch(0.66_0.24_27)] text-[oklch(1_0_0)] hover:bg-[oklch(0.57_0.24_27)] focus-visible:outline-[oklch(0.66_0.24_27)] active:bg-[oklch(0.53_0.24_27)];
+  .tw-btn-destructive {
+    @apply bg-red-600 text-white hover:bg-red-700 focus-visible:outline-red-500 active:bg-red-600/80;
   }
 
-  .btn-cancel {
-    @apply bg-[oklch(0.67_0.03_240)] text-[oklch(1_0_0)] hover:bg-[oklch(0.61_0.03_240)] focus-visible:outline-[oklch(0.67_0.03_240)] active:bg-[oklch(0.58_0.03_240)];
+  .tw-btn-cancel {
+    @apply bg-gray-200 text-gray-600 hover:bg-gray-300 focus-visible:outline-gray-500 active:bg-gray-400;
   }
-
   /* Status Badges */
-  .badge {
-    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  .tw-badge {
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium rounded-DEFAULT;
   }
 
-  .badge-success {
-    @apply bg-success-500 text-success-900;
+  .tw-badge-completed, .tw-badge-active {
+    @apply bg-success-300 text-success-900;
   }
 
-  .badge-pending {
-    @apply bg-error-500 text-error-900;
+  .tw-badge-cancelled, .tw-badge-inactive, .tw-badge-admin {
+    @apply bg-error-300 text-error-900;
   }
 
-  .badge-ongoing {
-    @apply bg-warning-500 text-warning-900;
+  .tw-badge-pending {
+    @apply bg-warning-300 text-warning-900;
   }
 
-  .badge-info {
-    @apply bg-info-500 text-info-900;
+  .tw-badge-on-going {
+    @apply bg-info-300 text-info-900;
   }
+
+  .tw-badge-info{
+    @apply bg-info-500 text-info-900
+  }
+
+  .tw-badge-neutral {
+      @apply bg-gray-200 text-gray-600;
+    }
 
   /* Form Inputs */
   .input {
@@ -403,6 +410,15 @@
   }
 }
 
+.clear-both {
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 @plugin "daisyui";
 
 @plugin "daisyui/theme" {
@@ -433,7 +449,7 @@
 
   /* Informational Colors */
   --color-info: oklch(0.80 0.10 230);
-  --color-info-content: oklch(0.18 0.03 265);
+  --color-info-content: oklch(0.35 0.10 230);
 
   /* Status Colors */
   --color-success: oklch(0.85 0.10 145);
