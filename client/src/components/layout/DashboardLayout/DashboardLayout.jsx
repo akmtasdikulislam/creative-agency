@@ -47,9 +47,9 @@ const DashboardLayout = () => {
       />
 
       <div
-        className={`fixed left-0 top-0 z-30 h-screen w-64 border-r border-gray-200 bg-white transition-transform duration-300 ${
+        className={`fixed left-0 top-0 h-screen w-64 border-r border-gray-200 bg-white transition-transform duration-300 ${
           sidebarOpen
-            ? "translate-x-0 shadow-lg"
+            ? "z-30 translate-x-0 shadow-lg"
             : "-translate-x-full shadow-none lg:translate-x-0"
         }`}
       >
@@ -64,7 +64,7 @@ const DashboardLayout = () => {
       </div>
 
       <div className="flex h-screen flex-col overflow-x-hidden transition-all duration-300 lg:ml-64">
-        <div className="fixed right-0 top-0 z-10 w-full bg-white shadow-sm lg:w-[calc(100%-16rem)]">
+        <div className="fixed right-0 top-0 z-0 w-full bg-white shadow-sm lg:w-[calc(100%-16rem)]">
           <div className="flex items-center">
             <button
               onClick={toggleSidebar}
