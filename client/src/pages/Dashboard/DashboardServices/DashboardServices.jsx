@@ -29,6 +29,7 @@ const DashboardServices = () => {
         "Amazing flyers, social media posts and brand representations that would make your brand stand out.",
       imageUrl: service1,
       status: "active",
+      createdAt: "14 Mar 2025",
     },
     {
       id: 3,
@@ -37,6 +38,7 @@ const DashboardServices = () => {
         "Professional and responsive websites built with modern technologies to enhance your online presence.",
       imageUrl: service3,
       status: "active",
+      createdAt: "22 Sep 2024",
     },
 
     {
@@ -46,6 +48,7 @@ const DashboardServices = () => {
         "User-centered design solutions that create seamless and engaging experiences for your customers.",
       imageUrl: service2,
       status: "inactive",
+      createdAt: "05 Dec 2024",
     },
     {
       id: 4,
@@ -54,6 +57,7 @@ const DashboardServices = () => {
         "Strategic marketing campaigns to boost your brand visibility and reach your target audience effectively.",
       imageUrl: service4,
       status: "inactive",
+      createdAt: "18 Jul 2025",
     },
     {
       id: 5,
@@ -62,9 +66,9 @@ const DashboardServices = () => {
         "Compelling content that tells your brand story and connects with your audience across all platforms.",
       imageUrl: service5,
       status: "active",
+      createdAt: "30 Jan 2025",
     },
   ];
-
   return (
     <section className="h-full w-full">
       <div className="action-bar border-accent-200 flex flex-wrap items-center justify-between gap-4 border-b pb-10">
