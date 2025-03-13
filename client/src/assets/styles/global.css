@@ -35,3 +35,11 @@ a.active {
 .sidebar-links a.active:hover {
   @apply bg-green-100 text-green-700 no-underline;
 }
+
+.file-icon{
+  @apply h-auto max-w-10 w-10 max-h-11 overflow-hidden flex items-center justify-center;
+}
+
+.file-icon img{
+  @apply h-full w-full object-cover;
+}
