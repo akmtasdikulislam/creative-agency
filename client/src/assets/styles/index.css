@@ -372,7 +372,7 @@
   }
 
   .tw-badge-info{
-    @apply bg-info-500 text-info-900
+    @apply bg-info-600 text-white font-semibold;
   }
 
   .tw-badge-neutral {
