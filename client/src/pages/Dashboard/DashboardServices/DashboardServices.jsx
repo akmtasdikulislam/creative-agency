@@ -1,19 +1,23 @@
-import Button from "@/components/common/Button/Button";
-import SearchBar from "@/components/common/SearchBar/SearchBar";
-import SortOptions from "@/components/common/SortOptions/SortOptions";
-import DashboardServiceCard from "@/components/features/DashboardLayout/DashboardServiceCard/DashboardServiceCard";
-import { updateTitle } from "@/utils/updateTitle";
+import { MODAL_TYPES } from "@/lib/Modal/ModalRegistry";
 import service1 from "@assets/icons/service-icons/service1.png";
 import service2 from "@assets/icons/service-icons/service2.png";
 import service3 from "@assets/icons/service-icons/service3.png";
 import service4 from "@assets/icons/service-icons/service4.png";
 import service5 from "@assets/icons/service-icons/service5.png";
+import Button from "@components/common/Button/Button";
+import SearchBar from "@components/common/SearchBar/SearchBar";
+import SortOptions from "@components/common/SortOptions/SortOptions";
+import DashboardServiceCard from "@components/features/DashboardLayout/DashboardServiceCard/DashboardServiceCard";
+import { useModal } from "@hooks/useModal";
+import { updateTitle } from "@utils/updateTitle";
 import { useEffect } from "react";
 import { HiPlus } from "react-icons/hi2";
 import { useOutletContext } from "react-router";
 
 const DashboardServices = () => {
   const { setHeaderTitle } = useOutletContext();
+
+  const { openModal } = useModal();
 
   useEffect(() => {
     setHeaderTitle("Services Management");
@@ -69,6 +73,17 @@ const DashboardServices = () => {
       createdAt: "30 Jan 2025",
     },
   ];
+
+  const handleAddNew = () => {
+    openModal(`${MODAL_TYPES.SERVICE_MODAL}:service-${Date()})}`, {
+      addNew: true,
+      service: {},
+      onSave: (updatedService) => {
+        console.log(updatedService);
+      },
+    });
+  };
+
   return (
     <section className="h-full w-full">
       <div className="action-bar border-accent-200 flex flex-wrap items-center justify-between gap-4 border-b pb-10">
@@ -79,6 +94,7 @@ const DashboardServices = () => {
             variant="primary"
             size="sm"
             className="flex-auto md:flex-none"
+            onClick={handleAddNew}
           >
             <HiPlus size="1.25em" />
             <span className="hidden md:block">Add new</span>
