@@ -1,4 +1,6 @@
-import Button from "@/components/common/Button/Button";
+import { MODAL_TYPES } from "@/lib/Modal/ModalRegistry";
+import Button from "@components/common/Button/Button";
+import { useModal } from "@hooks/useModal";
 import PropTypes from "prop-types";
 import { useEffect, useRef, useState } from "react";
 import {
@@ -7,7 +9,14 @@ import {
   HiOutlineTrash,
 } from "react-icons/hi2";
 
-const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
+const DashboardServiceModal = ({
+  service = {},
+  addNew,
+  onClose,
+  onSave,
+  modalId,
+}) => {
+  const { openModal, closeModal, reOpenModal } = useModal();
   const [isStatusOpen, setIsStatusOpen] = useState(false);
   const [status, setStatus] = useState(service?.status || "active");
   const [isEditing, setIsEditing] = useState(addNew ? true : false);
@@ -19,10 +28,10 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
           imageUrl: "",
         }
       : {
-          title: service.title,
-          description: service.description,
-          imageUrl: service.imageUrl,
-          createdAt: service.createdAt,
+          title: service?.title || "",
+          description: service?.description || "",
+          imageUrl: service?.imageUrl || "",
+          createdAt: service?.createdAt || "",
         },
   );
   const statusOptions = [
@@ -66,18 +75,25 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
   };
 
   const handleSave = () => {
-    // onEdit(editedService);
+    onSave({
+      ...editedService,
+      status,
+    });
     setIsEditing(false);
   };
 
   const handleCancel = () => {
-    setEditedService({
-      title: service.title,
-      description: service.description,
-      imageUrl: service.imageUrl,
-    });
+    if (service) {
+      setEditedService({
+        title: service.title || "",
+        description: service.description || "",
+        imageUrl: service.imageUrl || "",
+        createdAt: service.createdAt || "",
+      });
+    }
     setIsEditing(false);
   };
+
   const handleDiscard = () => {
     setEditedService({
       title: "",
@@ -95,6 +111,7 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
       setEditedService((prev) => ({ ...prev, imageUrl: imageUrl }));
     }
   };
+
   const handleImageRemove = () => {
     setEditedService((prev) => ({ ...prev, imageUrl: "" }));
     // Reset the file input
@@ -102,6 +119,21 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
     if (fileInput) {
       fileInput.value = "";
     }
+  };
+
+  const handleDeleteClik = () => {
+    openModal(`${MODAL_TYPES.DELETE_CONFIRM}:service-${service.id}`, {
+      message: "Are you sure you want to delete this service?",
+      onConfirm: () => {
+        console.log("Confirm Delete Service");
+      },
+      onCancel: () => {
+        closeModal(`${MODAL_TYPES.DELETE_CONFIRM}:service-${service.id}`);
+        reOpenModal(modalId);
+      },
+    });
+
+    onClose();
   };
 
   return (
@@ -137,7 +169,7 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
                 />
               ) : (
                 <h5 className="text-text-primary text-xl font-semibold">
-                  {service.title}
+                  {editedService.title}
                 </h5>
               )}
             </div>
@@ -246,22 +278,30 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
               rows="4"
             />
           ) : (
-            <p className="text-text-primary">{service.description}</p>
+            <p className="text-text-primary">{editedService.description}</p>
           )}
         </div>
 
         {/* Created On */}
-        {!addNew && (
+        {!addNew && editedService.createdAt && (
           <div>
             <h6 className="text-text-secondary mb-0.5 text-sm">Created on:</h6>
-            <p className="text-text-primary">{service.createdAt}</p>
+            <p className="text-text-primary">{editedService.createdAt}</p>
           </div>
         )}
       </div>
+
       <div className="mt-6 flex justify-between">
         {addNew && isEditing && (
           <>
-            <Button onClick={() => console.log({ addNew })}>Save</Button>
+            <Button
+              onClick={() => {
+                handleSave();
+                onClose();
+              }}
+            >
+              Save
+            </Button>
             <button
               className="tw-btn tw-btn-destructive"
               onClick={handleDiscard}
@@ -270,6 +310,7 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
             </button>
           </>
         )}
+
         {!addNew && isEditing && (
           <>
             <Button onClick={handleSave}>Save</Button>
@@ -281,7 +322,10 @@ const DashboardServiceModal = ({ service, addNew, onClose, onDelete }) => {
         {!addNew && !isEditing && (
           <>
             <Button onClick={handleEdit}>Edit</Button>
-            <button className="tw-btn tw-btn-destructive" onClick={onDelete}>
+            <button
+              className="tw-btn tw-btn-destructive"
+              onClick={handleDeleteClik}
+            >
               Delete
             </button>
           </>
@@ -296,9 +340,11 @@ DashboardServiceModal.propTypes = {
     title: PropTypes.string,
     status: PropTypes.string,
     description: PropTypes.string,
-    createdOn: PropTypes.string,
+    createdAt: PropTypes.string,
+    imageUrl: PropTypes.string,
   }),
-  onEdit: PropTypes.func,
+  addNew: PropTypes.bool,
+  onSave: PropTypes.func,
   onClose: PropTypes.func,
 };
 
