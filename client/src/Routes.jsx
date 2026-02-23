@@ -4,7 +4,7 @@ import DashboardLayout from "@components/layout/DashboardLayout/DashboardLayout"
 import MainLayout from "@components/layout/MainLayout/MainLayout";
 import ForgotPassword from "@pages/Auth/ForgotPassword/ForgotPassword";
 import SignIn from "@pages/Auth/SignIn/SignIn";
-import SignUp from "@pages/Auth/SignUp/SignUp";
+import SignUp from "@pages/Auth/Signup/Signup";
 import DashboardIndex from "@pages/Dashboard/DashboardIndex/DashboardIndex";
 import DashboardOrders from "@pages/Dashboard/DashboardOrders/DashboardOrders";
 import DashboardReviews from "@pages/Dashboard/DashboardReviews/DashboardReviews";
